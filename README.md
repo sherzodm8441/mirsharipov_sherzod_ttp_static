@@ -1,0 +1,1 @@
+# mirsharipov_sherzod_ttp_static
