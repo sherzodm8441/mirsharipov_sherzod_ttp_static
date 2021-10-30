@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>My Name and Favorite Hobby Deployed Static Web Page</title>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<h1>My name is Sherzod Mirsharipov and my favorite hobby is cooking. The current time is <span id="time"></span>.<h1>
+
+</body>
+<script type="text/javascript">
+
+	function displayTime(){
+		var newDate = new Date();
+		
+		var hour = newDate.getHours();
+		var minute = newDate.getMinutes();
+		var second = newDate.getSeconds();
+		
+		if(hour == 0){
+			hour = 12;
+		}
+		
+		if(hour > 12){// 12hr time format
+			hour -= 12;
+		}
+		
+		if(hour < 10){
+			hour = "0" + hour;
+		}
+		if(minute < 10){
+			minute = "0" + minute;
+		}
+		if(second < 10){
+			second = "0" + second;
+		}
+		
+		
+		var currentTime = hour + ":" + minute + ":" + second;// builds the time string
+		document.getElementById("time").innerText = currentTime;//inserts the string into an element with the given id
+	}
+	
+	setInterval(displayTime, 1000);	// updates the given function every second
+		
+		
+	
+</script>
+</html>
